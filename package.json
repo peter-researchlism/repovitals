@@ -1,0 +1,42 @@
+{
+  "name": "repovitals",
+  "version": "0.1.0",
+  "description": "MCP server that gives any AI coding agent a fast, structured health diagnosis of a code repository.",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "bin": {
+    "repovitals": "dist/src/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "start": "node dist/src/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "print-plan": "node dist/scripts/print-plan.js examples/stale-example"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "repository-health",
+    "ai-coding-agent",
+    "static-analysis"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.4.5",
+    "vitest": "^4.1.8"
+  }
+}
